@@ -9,7 +9,7 @@
 
 a {
   text-decoration: none;
-  color: #f4f4f4; }
+  color: #121212; }
 
 ul {
   list-style: none; }
@@ -26,11 +26,29 @@ span.highlight {
   padding: 0.2rem 0.25rem;
   color: #121212;
   font-weight: bold;
-  border-radius: 6px; }
+  border-radius: 6px;
+  transition: all 0.4s; }
+
+span.highlight-small {
+  display: inline-block;
+  background: #ff7597;
+  padding: 0.12rem 0.2rem;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  transition: all 0.3s; }
+  span.highlight-small:hover {
+    padding: 0.25rem 0.35rem;
+    background: #ff5c84; }
 
 .lead {
   font-size: 1.69rem;
   color: #ccc; }
+  .lead-small {
+    font-size: 1rem;
+    color: #ccc; }
 
 .text-center {
   text-align: center; }
@@ -47,7 +65,7 @@ span.highlight {
     height: 2px;
     width: 1rem;
     margin: 0 auto;
-    background: #bb86fc; }
+    background: #ff7597; }
 
 .btn {
   display: inline-block;
@@ -123,11 +141,12 @@ h1 {
         #main-navbar .container ul li:hover {
           border-color: #bb86fc; }
         #main-navbar .container ul li a {
-          font-size: 1rem; }
+          font-size: 1rem;
+          color: #f4f4f4; }
 
 #showcase {
   position: relative;
-  background: url("https://art.pixilart.com/8b6698a852323f3.gif") no-repeat center center/cover;
+  background: url("../img/showcase.gif") no-repeat center center/cover;
   transition: all 0.4s;
   height: 100vh;
   width: 100%; }
@@ -191,3 +210,82 @@ h1 {
         background: #bb86fc;
         border-radius: 50%;
         margin-bottom: 0.3rem; }
+
+.section-b .container-inner > div {
+  margin-bottom: 1.2rem;
+  text-align: center; }
+  .section-b .container-inner > div h3 {
+    color: #ccc;
+    margin-bottom: 0.35rem; }
+  .section-b .container-inner > div .lead {
+    font-size: 1.2rem; }
+
+.section-b .grid-container {
+  display: grid;
+  grid-template-areas: "project-1 project-2" "project-3 project-3";
+  gap: 1rem; }
+  .section-b .grid-container .project-1 {
+    grid-area: "project-1";
+    background: #272727;
+    padding: 1rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .section-b .grid-container .project-1:hover {
+      transform: scale(1.0469);
+      background: #2a2a2a; }
+    .section-b .grid-container .project-1 h4 {
+      color: #ccc;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem; }
+    .section-b .grid-container .project-1 > div {
+      flex: 2; }
+      .section-b .grid-container .project-1 > div img {
+        width: 100%; }
+  .section-b .grid-container .project-2 {
+    grid-area: "project-2";
+    background: #272727;
+    padding: 1rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .section-b .grid-container .project-2:hover {
+      transform: scale(1.0469);
+      background: #2a2a2a; }
+    .section-b .grid-container .project-2 h4 {
+      color: #ccc;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem; }
+    .section-b .grid-container .project-2 > div {
+      flex: 2; }
+      .section-b .grid-container .project-2 > div img {
+        width: 100%; }
+  .section-b .grid-container .project-3 {
+    grid-area: "project-3";
+    background: #272727;
+    padding: 1rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background: #272727;
+    padding: 1rem;
+    border-radius: 6px;
+    grid-column: 1 / span 2; }
+    .section-b .grid-container .project-3:hover {
+      transform: scale(1.0469);
+      background: #2a2a2a; }
+    .section-b .grid-container .project-3 h4 {
+      color: #ccc;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem; }
+    .section-b .grid-container .project-3 > div {
+      max-height: 21.69rem; }
+      .section-b .grid-container .project-3 > div img {
+        width: 70%;
+        margin: 0 auto;
+        height: 100%; }

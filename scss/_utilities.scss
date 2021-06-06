@@ -15,7 +15,7 @@
 // a
 a {
   text-decoration: none;
-  color: $text-secondary;
+  color: $primary-dark;
 }
 
 // ul
@@ -39,6 +39,23 @@ span.highlight {
   color: $primary-dark;
   font-weight: bold;
   border-radius: 6px;
+  transition: all 0.4s;
+}
+
+span.highlight-small {
+  display: inline-block;
+  background: #ff7597;
+  padding: 0.12rem 0.2rem;
+  color: $primary-dark;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  transition: all 0.3s;
+  &:hover {
+    padding: 0.25rem 0.35rem;
+    background: darken(#ff7597, 5%);
+  }
 }
 
 // p
@@ -46,6 +63,10 @@ span.highlight {
 .lead {
   font-size: 1.69rem;
   color: $text-primary;
+  &-small {
+    font-size: 1rem;
+    color: $text-primary;
+  }
 }
 
 // text
@@ -70,7 +91,7 @@ span.highlight {
     height: 2px;
     width: 1rem;
     margin: 0 auto;
-    background: $primary-color;
+    background: #ff7597;
   }
 }
 
@@ -130,5 +151,20 @@ span.highlight {
   }
   &-1 {
     margin: 3rem 0;
+  }
+}
+
+// project mixin
+@mixin project-base {
+  background: #272727;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  &:hover {
+    transform: scale(1.0469);
+    background: lighten($secondary-dark, 1.269%);
   }
 }

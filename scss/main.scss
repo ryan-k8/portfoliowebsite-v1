@@ -43,6 +43,7 @@ h1 {
         }
         a {
           font-size: 1rem;
+          color: $text-secondary;
         }
       }
     }
@@ -140,6 +141,90 @@ h1 {
           background: $primary-color;
           border-radius: 50%;
           margin-bottom: 0.3rem;
+        }
+      }
+    }
+  }
+
+  //   section b : projects
+  &-b {
+    .container-inner {
+      > div {
+        margin-bottom: 1.2rem;
+        text-align: center;
+        h3 {
+          color: $text-primary;
+          margin-bottom: 0.35rem;
+        }
+        .lead {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "project-1 project-2"
+        "project-3 project-3";
+      gap: 1rem;
+
+      .project {
+        &-1 {
+          grid-area: "project-1";
+          @include project-base;
+          h4 {
+            color: $text-primary;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+          }
+          > div {
+            flex: 2;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        &-2 {
+          grid-area: "project-2";
+          @include project-base;
+          h4 {
+            color: $text-primary;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+          }
+          > div {
+            flex: 2;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        &-3 {
+          grid-area: "project-3";
+          @include project-base;
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          background: #272727;
+          padding: 1rem;
+          border-radius: 6px;
+
+          //   spanning the main
+          grid-column: 1 / span 2;
+          h4 {
+            color: $text-primary;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+          }
+          > div {
+            // flex: 1;
+            max-height: 21.69rem;
+            img {
+              width: 70%;
+              margin: 0 auto;
+              height: 100%;
+            }
+          }
         }
       }
     }
