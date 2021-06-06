@@ -99,19 +99,7 @@ h1 {
 
   &-a {
     background: $primary-dark;
-    .container-inner {
-      > div {
-        margin-bottom: 0.4rem;
-        text-align: center;
-        h3 {
-          color: $text-primary;
-        }
-        .lead {
-          font-size: 1.2rem;
-        }
-      }
-    }
-
+    @include section-base;
     .grid-container {
       padding: 0.5rem 0.8rem;
       display: grid;
@@ -148,20 +136,7 @@ h1 {
 
   //   section b : projects
   &-b {
-    .container-inner {
-      > div {
-        margin-bottom: 1.2rem;
-        text-align: center;
-        h3 {
-          color: $text-primary;
-          margin-bottom: 0.35rem;
-        }
-        .lead {
-          font-size: 1.2rem;
-        }
-      }
-    }
-
+    @include section-base;
     .grid-container {
       display: grid;
       grid-template-areas:
@@ -174,9 +149,7 @@ h1 {
           grid-area: "project-1";
           @include project-base;
           h4 {
-            color: $text-primary;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
+            @include h4-base;
           }
           > div {
             flex: 2;
@@ -189,9 +162,7 @@ h1 {
           grid-area: "project-2";
           @include project-base;
           h4 {
-            color: $text-primary;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
+            @include h4-base;
           }
           > div {
             flex: 2;
@@ -212,9 +183,7 @@ h1 {
           //   spanning the main
           grid-column: 1 / span 2;
           h4 {
-            color: $text-primary;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
+            @include h4-base;
           }
           > div {
             // flex: 1;
@@ -223,6 +192,71 @@ h1 {
               width: 70%;
               margin: 0 auto;
               height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-c {
+    @include section-base;
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      padding: 0.5rem 0.8rem;
+      gap: 0rem 0.5rem;
+
+      .image-puck {
+        max-height: 18rem;
+        padding: 0.35rem;
+        position: relative;
+        img {
+          display: block;
+          width: 99%;
+          height: 100%;
+          margin: 0 auto;
+          border-radius: 5px;
+          transition: all 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          &:hover {
+            transform: scale(1.069) translateY(-10px);
+          }
+        }
+      }
+      .form-div {
+        background: $secondary-dark;
+        padding: 0.5rem;
+        border-radius: 6px;
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        form {
+          .form-group {
+            padding: 0.4rem;
+            margin: 0 auto;
+            input[type="text"] {
+              @include input-base;
+            }
+            input[type="email"] {
+              @include input-base;
+            }
+            textarea {
+              @include input-base;
+              &:focus {
+                border-width: 2.5px;
+                width: 80%;
+              }
+            }
+
+            input[type="submit"] {
+              padding: 0.2rem 0.5rem;
+              background: lighten($secondary-dark, 20%);
+              border: 1.2px solid transparent;
+              color: darken($text-primary, 10%);
+              font-weight: bold;
+              &:hover {
+                background: lighten($secondary-dark, 15%);
+                color: $text-primary;
+                border: 1.2px solid desaturate($primary-color, 10%);
+              }
             }
           }
         }

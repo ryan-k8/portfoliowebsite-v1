@@ -168,3 +168,43 @@ span.highlight-small {
     background: lighten($secondary-dark, 1.269%);
   }
 }
+
+// h4 mixin
+@mixin h4-base {
+  color: $text-primary;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+// section base mixin
+@mixin section-base {
+  .container-inner {
+    > div {
+      margin-bottom: 1.2rem;
+      text-align: center;
+      h3 {
+        color: $text-primary;
+        margin-bottom: 0.35rem;
+      }
+      .lead {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@mixin input-base {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  width: 45%;
+  margin: 0 0.25rem;
+  transition: all 0.25s;
+  background: lighten($secondary-dark, 10%);
+  color: $text-primary;
+  &:focus {
+    border: 1.8px solid desaturate($primary-color, 25%);
+    width: 46.5%;
+  }
+}

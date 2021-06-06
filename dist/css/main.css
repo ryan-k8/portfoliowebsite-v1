@@ -181,10 +181,11 @@ h1 {
 .section-a {
   background: #121212; }
   .section-a .container-inner > div {
-    margin-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
     text-align: center; }
     .section-a .container-inner > div h3 {
-      color: #ccc; }
+      color: #ccc;
+      margin-bottom: 0.35rem; }
     .section-a .container-inner > div .lead {
       font-size: 1.2rem; }
   .section-a .grid-container {
@@ -289,3 +290,91 @@ h1 {
         width: 70%;
         margin: 0 auto;
         height: 100%; }
+
+.section-c .container-inner > div {
+  margin-bottom: 1.2rem;
+  text-align: center; }
+  .section-c .container-inner > div h3 {
+    color: #ccc;
+    margin-bottom: 0.35rem; }
+  .section-c .container-inner > div .lead {
+    font-size: 1.2rem; }
+
+.section-c .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0.5rem 0.8rem;
+  gap: 0rem 0.5rem; }
+  .section-c .grid-container .image-puck {
+    max-height: 18rem;
+    padding: 0.35rem;
+    position: relative; }
+    .section-c .grid-container .image-puck img {
+      display: block;
+      width: 99%;
+      height: 100%;
+      margin: 0 auto;
+      border-radius: 5px;
+      transition: all 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+      .section-c .grid-container .image-puck img:hover {
+        transform: scale(1.069) translateY(-10px); }
+  .section-c .grid-container .form-div {
+    background: #272727;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .section-c .grid-container .form-div form .form-group {
+      padding: 0.4rem;
+      margin: 0 auto; }
+      .section-c .grid-container .form-div form .form-group input[type="text"] {
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        width: 45%;
+        margin: 0 0.25rem;
+        transition: all 0.25s;
+        background: #414141;
+        color: #ccc; }
+        .section-c .grid-container .form-div form .form-group input[type="text"]:focus {
+          border: 1.8px solid #bd96ed;
+          width: 46.5%; }
+      .section-c .grid-container .form-div form .form-group input[type="email"] {
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        width: 45%;
+        margin: 0 0.25rem;
+        transition: all 0.25s;
+        background: #414141;
+        color: #ccc; }
+        .section-c .grid-container .form-div form .form-group input[type="email"]:focus {
+          border: 1.8px solid #bd96ed;
+          width: 46.5%; }
+      .section-c .grid-container .form-div form .form-group textarea {
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        width: 45%;
+        margin: 0 0.25rem;
+        transition: all 0.25s;
+        background: #414141;
+        color: #ccc; }
+        .section-c .grid-container .form-div form .form-group textarea:focus {
+          border: 1.8px solid #bd96ed;
+          width: 46.5%; }
+        .section-c .grid-container .form-div form .form-group textarea:focus {
+          border-width: 2.5px;
+          width: 80%; }
+      .section-c .grid-container .form-div form .form-group input[type="submit"] {
+        padding: 0.2rem 0.5rem;
+        background: #5a5a5a;
+        border: 1.2px solid transparent;
+        color: #b3b3b3;
+        font-weight: bold; }
+        .section-c .grid-container .form-div form .form-group input[type="submit"]:hover {
+          background: #4d4d4d;
+          color: #ccc;
+          border: 1.2px solid #bc8cf6; }
