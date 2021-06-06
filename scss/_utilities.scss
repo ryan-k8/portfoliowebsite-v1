@@ -1,0 +1,134 @@
+// css reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// container
+.container {
+  max-width: $website-width;
+  margin: 0 auto;
+}
+
+// a
+a {
+  text-decoration: none;
+  color: $text-secondary;
+}
+
+// ul
+ul {
+  list-style: none;
+}
+
+.list-small {
+  font-size: 0.8rem;
+  line-height: 1.1;
+  li {
+    color: $text-primary;
+  }
+}
+
+// span highlight
+span.highlight {
+  display: inline-block;
+  background: #03dac5;
+  padding: 0.2rem 0.25rem;
+  color: $primary-dark;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+// p
+
+.lead {
+  font-size: 1.69rem;
+  color: $text-primary;
+}
+
+// text
+
+.text-center {
+  text-align: center;
+}
+
+// section heading
+.section-heading {
+  font-size: 1.85rem;
+}
+
+// bottom line style
+.bottom-line {
+  height: 3px;
+  width: 3rem;
+  margin: 0 auto;
+  background: $primary-color;
+
+  &-small {
+    height: 2px;
+    width: 1rem;
+    margin: 0 auto;
+    background: $primary-color;
+  }
+}
+
+// btn
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  border: 2.5px solid $primary-dark;
+  color: $primary-dark;
+  background: $primary-color;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($primary-color, 6.9%);
+    transform: scale(1.05);
+  }
+}
+
+// padding classes
+
+.p {
+  &-1 {
+    padding: 1rem;
+  }
+  &-2 {
+    padding: 2rem;
+  }
+  &-3 {
+    padding: 3rem;
+  }
+}
+
+.py {
+  &-1 {
+    padding: 0 1rem;
+  }
+  &-2 {
+    padding: 0 2rem;
+  }
+  &-3 {
+    padding: 0 3rem;
+  }
+}
+
+// margin
+
+.my {
+  &-1 {
+    margin: 1.5rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-1 {
+    margin: 3rem 0;
+  }
+}

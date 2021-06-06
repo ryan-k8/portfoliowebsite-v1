@@ -1,0 +1,17 @@
+{
+  "name": "darkportfoliowebsite",
+  "version": "1.0.0",
+  "description": "my portfolio website based on material dark palette",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "ryan",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

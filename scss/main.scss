@@ -1,0 +1,147 @@
+@import "variables";
+@import "utilities";
+
+body {
+  font-family: $secondary-font;
+  background: $primary-dark;
+}
+
+h1 {
+  color: $primary-color;
+  font-family: $primary-font;
+}
+
+// navbar
+#main-navbar {
+  background: $primary-dark;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      padding: 0.2rem 0.7rem;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-left: 0.5rem;
+    }
+
+    ul {
+      display: flex;
+      li {
+        padding: 0.5rem;
+        margin-right: 1rem;
+        transition: all 0.4s ease;
+        border-bottom: 3px solid transparent;
+        &:hover {
+          border-color: $primary-color;
+        }
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// section : showcase
+#showcase {
+  position: relative;
+  background: $bg-image-2 no-repeat center center/cover;
+  transition: all 0.4s;
+  height: 100vh;
+  width: 100%;
+
+  &::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0.755;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .showcase-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+    div {
+      padding: 0 1rem;
+      z-index: 9;
+    }
+    h2 {
+      font-size: 3.69rem;
+      font-family: $primary-font;
+      margin-bottom: 0.5rem;
+      color: $text-secondary;
+    }
+
+    .lead {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.section {
+  // skills section
+
+  &-a {
+    background: $primary-dark;
+    .container-inner {
+      > div {
+        margin-bottom: 0.4rem;
+        text-align: center;
+        h3 {
+          color: $text-primary;
+        }
+        .lead {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .grid-container {
+      padding: 0.5rem 0.8rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      transition: all 0.4s;
+      gap: 1rem;
+
+      .items {
+        padding: 0.5rem;
+        background: $secondary-dark;
+        border-radius: 5px;
+        height: 100%;
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        min-height: 12.5rem;
+
+        &:hover {
+          transform: scale(1.12);
+        }
+
+        h4 {
+          margin: 0.25rem 0;
+          color: $text-primary;
+        }
+
+        i {
+          padding: 0.5rem;
+          background: $primary-color;
+          border-radius: 50%;
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  color: #f4f4f4; }
+
+ul {
+  list-style: none; }
+
+.list-small {
+  font-size: 0.8rem;
+  line-height: 1.1; }
+  .list-small li {
+    color: #ccc; }
+
+span.highlight {
+  display: inline-block;
+  background: #03dac5;
+  padding: 0.2rem 0.25rem;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 6px; }
+
+.lead {
+  font-size: 1.69rem;
+  color: #ccc; }
+
+.text-center {
+  text-align: center; }
+
+.section-heading {
+  font-size: 1.85rem; }
+
+.bottom-line {
+  height: 3px;
+  width: 3rem;
+  margin: 0 auto;
+  background: #bb86fc; }
+  .bottom-line-small {
+    height: 2px;
+    width: 1rem;
+    margin: 0 auto;
+    background: #bb86fc; }
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  border: 2.5px solid #121212;
+  color: #121212;
+  background: #bb86fc;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  cursor: pointer; }
+  .btn:hover {
+    background: #a864fb;
+    transform: scale(1.05); }
+
+.p-1 {
+  padding: 1rem; }
+
+.p-2 {
+  padding: 2rem; }
+
+.p-3 {
+  padding: 3rem; }
+
+.py-1 {
+  padding: 0 1rem; }
+
+.py-2 {
+  padding: 0 2rem; }
+
+.py-3 {
+  padding: 0 3rem; }
+
+.my-1 {
+  margin: 1.5rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-1 {
+  margin: 3rem 0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #121212; }
+
+h1 {
+  color: #bb86fc;
+  font-family: "Satisfy", cursive; }
+
+#main-navbar {
+  background: #121212;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999; }
+  #main-navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #main-navbar .container h1 {
+      padding: 0.2rem 0.7rem;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-left: 0.5rem; }
+    #main-navbar .container ul {
+      display: flex; }
+      #main-navbar .container ul li {
+        padding: 0.5rem;
+        margin-right: 1rem;
+        transition: all 0.4s ease;
+        border-bottom: 3px solid transparent; }
+        #main-navbar .container ul li:hover {
+          border-color: #bb86fc; }
+        #main-navbar .container ul li a {
+          font-size: 1rem; }
+
+#showcase {
+  position: relative;
+  background: url("https://art.pixilart.com/8b6698a852323f3.gif") no-repeat center center/cover;
+  transition: all 0.4s;
+  height: 100vh;
+  width: 100%; }
+  #showcase::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0.755;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  #showcase .showcase-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh; }
+    #showcase .showcase-container div {
+      padding: 0 1rem;
+      z-index: 9; }
+    #showcase .showcase-container h2 {
+      font-size: 3.69rem;
+      font-family: "Satisfy", cursive;
+      margin-bottom: 0.5rem;
+      color: #f4f4f4; }
+    #showcase .showcase-container .lead {
+      margin-bottom: 0.5rem; }
+
+.section-a {
+  background: #121212; }
+  .section-a .container-inner > div {
+    margin-bottom: 0.4rem;
+    text-align: center; }
+    .section-a .container-inner > div h3 {
+      color: #ccc; }
+    .section-a .container-inner > div .lead {
+      font-size: 1.2rem; }
+  .section-a .grid-container {
+    padding: 0.5rem 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transition: all 0.4s;
+    gap: 1rem; }
+    .section-a .grid-container .items {
+      padding: 0.5rem;
+      background: #272727;
+      border-radius: 5px;
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      min-height: 12.5rem; }
+      .section-a .grid-container .items:hover {
+        transform: scale(1.12); }
+      .section-a .grid-container .items h4 {
+        margin: 0.25rem 0;
+        color: #ccc; }
+      .section-a .grid-container .items i {
+        padding: 0.5rem;
+        background: #bb86fc;
+        border-radius: 50%;
+        margin-bottom: 0.3rem; }
