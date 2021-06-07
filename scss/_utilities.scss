@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 // container
@@ -100,7 +101,7 @@ span.highlight-small {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.2rem;
-  border: 2.5px solid $primary-dark;
+  border: none;
   color: $primary-dark;
   background: $primary-color;
   border-radius: 15px;
@@ -165,7 +166,7 @@ span.highlight-small {
 
   &:hover {
     transform: scale(1.0469);
-    background: lighten($secondary-dark, 1.269%);
+    background: lighten($secondary-dark, 4%);
   }
 }
 

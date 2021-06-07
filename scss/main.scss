@@ -116,6 +116,7 @@ h1 {
         min-height: 12.5rem;
 
         &:hover {
+          background: lighten($secondary-dark, 4%);
           transform: scale(1.12);
         }
 
@@ -280,13 +281,13 @@ h1 {
     div {
       p {
         font-size: 1.2rem;
-        color: $text-primary;
+        color: darken($text-primary, 10%);
       }
 
       .fab {
         margin-right: 0.55rem;
         padding: 0.2rem;
-        color: $text-primary;
+        color: darken($text-primary, 10%);
         transition: all 0.5s;
 
         &:nth-child(1):hover {
@@ -309,3 +310,6 @@ h1 {
     }
   }
 }
+
+// import media query partial
+@import "media";

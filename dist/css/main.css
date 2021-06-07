@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: visible; }
 
 .container {
   max-width: 1150px;
@@ -70,7 +71,7 @@ span.highlight-small {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.2rem;
-  border: 2.5px solid #121212;
+  border: none;
   color: #121212;
   background: #bb86fc;
   border-radius: 15px;
@@ -202,6 +203,7 @@ h1 {
       transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       min-height: 12.5rem; }
       .section-a .grid-container .items:hover {
+        background: #313131;
         transform: scale(1.12); }
       .section-a .grid-container .items h4 {
         margin: 0.25rem 0;
@@ -235,7 +237,7 @@ h1 {
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
     .section-b .grid-container .project-1:hover {
       transform: scale(1.0469);
-      background: #2a2a2a; }
+      background: #313131; }
     .section-b .grid-container .project-1 h4 {
       color: #ccc;
       font-size: 1.25rem;
@@ -254,7 +256,7 @@ h1 {
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
     .section-b .grid-container .project-2:hover {
       transform: scale(1.0469);
-      background: #2a2a2a; }
+      background: #313131; }
     .section-b .grid-container .project-2 h4 {
       color: #ccc;
       font-size: 1.25rem;
@@ -279,7 +281,7 @@ h1 {
     grid-column: 1 / span 2; }
     .section-b .grid-container .project-3:hover {
       transform: scale(1.0469);
-      background: #2a2a2a; }
+      background: #313131; }
     .section-b .grid-container .project-3 h4 {
       color: #ccc;
       font-size: 1.25rem;
@@ -391,11 +393,11 @@ h1 {
     align-items: center; }
     #main-footer .container div p {
       font-size: 1.2rem;
-      color: #ccc; }
+      color: #b3b3b3; }
     #main-footer .container div .fab {
       margin-right: 0.55rem;
       padding: 0.2rem;
-      color: #ccc;
+      color: #b3b3b3;
       transition: all 0.5s; }
       #main-footer .container div .fab:nth-child(1):hover {
         color: #bb86fc;
@@ -441,3 +443,111 @@ h1 {
     transform: translateY(-4px); }
   100% {
     transform: translateY(0); } }
+
+@media (max-width: 600px) {
+  #main-navbar .container {
+    flex-direction: column; }
+    #main-navbar .container h1 {
+      padding: 0.2rem;
+      font-size: 1rem;
+      margin: 0; }
+    #main-navbar .container ul li {
+      padding: 0.2rem;
+      margin-right: 0.5rem; }
+      #main-navbar .container ul li a {
+        font-size: 1.1rem; }
+  #showcase .showcase-container {
+    padding-top: 15vh; }
+    #showcase .showcase-container div {
+      padding: 0 0.5rem; }
+    #showcase .showcase-container h2 {
+      font-size: 2.3rem; }
+    #showcase .showcase-container .lead {
+      font-size: 1rem; }
+    #showcase .showcase-container .btn {
+      padding: 0.3rem;
+      font-size: 0.85rem;
+      border: none; }
+  .section-a .container-inner > div .section-heading {
+    font-size: 1.25rem; }
+  .section-a .container-inner > div .lead {
+    font-size: 0.95rem;
+    margin-top: 0.1rem; }
+  .section-a .grid-container {
+    padding: 0.25rem 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem; }
+    .section-a .grid-container .items {
+      padding: 0.8rem 0;
+      min-height: auto; }
+      .section-a .grid-container .items:hover {
+        background: #343434;
+        transform: scale(1.05); }
+      .section-a .grid-container .items i {
+        padding: 0.35rem;
+        font-size: 1.5rem; }
+  .section-b .container-inner {
+    padding: 0.5rem 2rem; }
+    .section-b .container-inner > div .section-heading {
+      font-size: 1.25rem; }
+    .section-b .container-inner > div .lead {
+      font-size: 0.95rem;
+      margin-top: 0.1rem; }
+  .section-b .grid-container {
+    display: flex;
+    flex-direction: column; }
+    .section-b .grid-container .project-1 h4 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem; }
+    .section-b .grid-container .project-1 > div img {
+      width: 95%;
+      margin: 0 auto; }
+    .section-b .grid-container .project-2 h4 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem; }
+    .section-b .grid-container .project-2 > div img {
+      width: 95%;
+      margin: 0 auto; }
+    .section-b .grid-container .project-3 {
+      grid-template-columns: 1fr;
+      grid-column-start: 1 / span; }
+      .section-b .grid-container .project-3 h4 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem; }
+      .section-b .grid-container .project-3 > div img {
+        width: 95%;
+        margin: 0 auto;
+        max-height: 16rem; }
+  .section-c .container-inner {
+    padding: 0.5rem 1rem; }
+    .section-c .container-inner > div {
+      margin-bottom: 0.5rem; }
+      .section-c .container-inner > div .section-heading {
+        font-size: 1.25rem; }
+      .section-c .container-inner > div .lead {
+        font-size: 0.95rem;
+        margin-top: 0.1rem; }
+  .section-c .grid-container {
+    grid-template-columns: 1fr;
+    padding: 0; }
+    .section-c .grid-container .image-puck {
+      display: none; }
+    .section-c .grid-container .form-div {
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+      .section-c .grid-container .form-div form .form-group input[type="text"]:focus,
+      .section-c .grid-container .form-div form .form-group input[type="email"]:focus {
+        border-width: 2px;
+        width: 45%; }
+  #main-footer {
+    margin-top: 0.5rem; }
+    #main-footer .container {
+      padding: 0.5rem;
+      flex-direction: column; }
+      #main-footer .container div p {
+        font-size: 1.1rem; } }
+
+@media (min-width: 600px) and (max-width: 820px) {
+  .section-a .grid-container {
+    grid-template-columns: repeat(3, 1fr); }
+    .section-a .grid-container .items {
+      min-height: auto; } }
