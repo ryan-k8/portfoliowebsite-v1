@@ -242,7 +242,8 @@ h1 {
               @include input-base;
               &:focus {
                 border-width: 2.5px;
-                width: 80%;
+                width: 75%;
+                margin: 0 auto;
               }
             }
 
@@ -259,6 +260,50 @@ h1 {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+// footer
+
+#main-footer {
+  margin-top: 1.5rem;
+  background: $secondary-dark;
+  .container {
+    background: $secondary-dark;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div {
+      p {
+        font-size: 1.2rem;
+        color: $text-primary;
+      }
+
+      .fab {
+        margin-right: 0.55rem;
+        padding: 0.2rem;
+        color: $text-primary;
+        transition: all 0.5s;
+
+        &:nth-child(1):hover {
+          @include icon-hover-base;
+          color: $primary-color;
+        }
+        &:nth-child(2):hover {
+          @include icon-hover-base;
+          color: desaturate(#cd486b, 5%);
+        }
+        &:nth-child(3):hover {
+          @include icon-hover-base;
+          color: desaturate(#00acee, 10%);
+        }
+        &:nth-child(4):hover {
+          @include icon-hover-base;
+          color: desaturate(#4267b2, 10%);
         }
       }
     }

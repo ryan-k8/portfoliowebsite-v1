@@ -204,7 +204,22 @@ span.highlight-small {
   background: lighten($secondary-dark, 10%);
   color: $text-primary;
   &:focus {
-    border: 1.8px solid desaturate($primary-color, 25%);
+    border: 2.25px solid desaturate($primary-color, 25%);
     width: 46.5%;
+  }
+}
+
+@mixin icon-hover-base {
+  color: $primary-color;
+  cursor: pointer;
+  animation: animate-icon 0.5s;
+
+  @keyframes animate-icon {
+    50% {
+      transform: translateY(-4px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 }
